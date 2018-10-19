@@ -71,7 +71,7 @@ namespace assignment4Server.Controllers
             _context.ShoppingList.Add(item);
             _context.SaveChanges();
 
-            return RedirectToAction(item.Id.ToString(), "item");
+            return new ObjectResult(item);
         }
 
         [HttpDelete("{id}")]
